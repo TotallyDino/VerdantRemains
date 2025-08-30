@@ -1,0 +1,7 @@
+{
+  "name": "VerdantRemains.Core",
+  "rootNamespace": "VerdantRemains.Core",
+  "autoReferenced": true,
+  "noEngineReferences": false,
+  "overrideReferences": false
+}

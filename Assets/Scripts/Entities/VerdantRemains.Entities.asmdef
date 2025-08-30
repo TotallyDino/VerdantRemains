@@ -1,0 +1,17 @@
+{
+    "name": "VerdantRemains.Entities",
+    "rootNamespace": "VerdantRemains.Entities",
+    "references": [
+        "GUID:6a3ef513c769ba3428d49dd8ab94e16f",
+        "GUID:527ed110b4c883a45933a11460c04a35"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

@@ -1,0 +1,16 @@
+{
+    "name": "VerdantRemains.Narrative",
+    "rootNamespace": "VerdantRemains.Narrative",
+    "references": [
+        "GUID:6a3ef513c769ba3428d49dd8ab94e16f"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

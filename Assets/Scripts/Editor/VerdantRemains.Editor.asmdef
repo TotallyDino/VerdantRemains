@@ -1,0 +1,22 @@
+{
+    "name": "VerdantRemains.Editor",
+    "rootNamespace": "VerdantRemains.Editor",
+    "references": [
+        "GUID:6a3ef513c769ba3428d49dd8ab94e16f",
+        "GUID:527ed110b4c883a45933a11460c04a35",
+        "GUID:4ed51fd1cdefb144097afc10d69486bb",
+        "GUID:f14298eec375a3c4eac7c5705548f24d",
+        "GUID:602c53fea16dd7c4dbb628e70f3b4ad1"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
