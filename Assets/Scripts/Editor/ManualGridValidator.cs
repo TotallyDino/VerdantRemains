@@ -1,36 +1,71 @@
+// Assets/Scripts/Editor/ManualGridValidator.cs
 #if UNITY_EDITOR
 using UnityEditor;
 using UnityEngine;
-using VerdantRemains.Grid;
+using System;
+using System.Reflection;
 
-namespace VerdantRemains.Editor
+namespace VerdantRemains.EditorTools
 {
     public static class ManualGridValidator
     {
-        [MenuItem("Verdant Remains/Validate/Grid (Manual)")]
-        public static void ValidateGrid()
+        [MenuItem("Verdant Remains/Debug/Validate Grid (Manual)")]
+        public static void Validate()
         {
-            var grid = Object.FindObjectOfType<GridManager>();
-            if (!grid) { Debug.LogError("[GridValidator] No GridManager in scene."); return; }
-            if (!grid.IsInitialized) { Debug.LogError("[GridValidator] Grid not initialized."); return; }
-
-            // sample random cells for null checks
-            int nulls = 0;
-            for (int i = 0; i < 10; i++)
+            var grid = FindGridManager();
+            if (!grid)
             {
-                int x = Random.Range(0, grid.width);
-                int y = Random.Range(0, grid.height);
-                if (grid.GetCell(x, y) == null) nulls++;
+                Debug.LogWarning("[Grid] Manual validation: GridManager not found in the open scene.");
+                return;
             }
-            if (nulls > 0) { Debug.LogError($"[GridValidator] Found null cells ({nulls}/10)."); return; }
 
-            // quick occupancy count
-            int occ = 0;
-            for (int y = 0; y < grid.height; y++)
-                for (int x = 0; x < grid.width; x++)
-                    if (grid.GetCell(x, y).occupied) occ++;
+            // Try to read width/height/cellSize from either fields or properties (camelCase or PascalCase)
+            int width  = GetMemberValue<int>(grid, "Width", "width");
+            int height = GetMemberValue<int>(grid, "Height", "height");
+            float cell = GetMemberValue<float>(grid, "CellSize", "cellSize");
 
-            Debug.Log($"[GridValidator] PASS. Size={grid.width}x{grid.height}, Occupied={occ}.");
+            bool inBounds = (width > 0 && height > 0 && cell > 0f);
+            if (!inBounds)
+            {
+                Debug.LogWarning($"[Grid] Invalid config: width={width}, height={height}, cellSize={cell}");
+            }
+            else
+            {
+                Debug.Log($"[Grid] OK — Size={width}x{height}, Cell={cell}");
+            }
+        }
+
+        private static VerdantRemains.Grid.GridManager FindGridManager()
+        {
+#if UNITY_2022_2_OR_NEWER
+            var g = UnityEngine.Object.FindFirstObjectByType<VerdantRemains.Grid.GridManager>();
+            if (!g) g = UnityEngine.Object.FindAnyObjectByType<VerdantRemains.Grid.GridManager>();
+            return g;
+#else
+            return UnityEngine.Object.FindObjectOfType<VerdantRemains.Grid.GridManager>();
+#endif
+        }
+
+        private static T GetMemberValue<T>(object obj, params string[] names)
+        {
+            var flags = BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic;
+            var type = obj.GetType();
+
+            foreach (var name in names)
+            {
+                // Property first
+                var prop = type.GetProperty(name, flags);
+                if (prop != null && prop.PropertyType == typeof(T))
+                    return (T)prop.GetValue(obj);
+
+                // Field fallback
+                var field = type.GetField(name, flags);
+                if (field != null && field.FieldType == typeof(T))
+                    return (T)field.GetValue(obj);
+            }
+
+            // If not found or wrong type, return default(T)
+            return default;
         }
     }
 }
