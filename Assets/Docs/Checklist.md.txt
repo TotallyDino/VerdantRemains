@@ -1,0 +1,70 @@
+# Verdant Remains — Development Checklist
+
+This file tracks major roadmap items.  
+Tick off items as they’re completed. Keep docs updated (see `Assets/Docs/`).
+
+---
+
+## ✅ Phase 0 — Foundations (Complete)
+- [x] Project setup (Unity LTS URP, Input System, transparency sort axis)
+- [x] Repo initialized with .gitignore, .gitattributes
+- [x] Assembly definitions (Core, Grid, Build, Narrative, Editor)
+- [x] Core utilities (EventBus, IsoRay, Mathx, DevToggles)
+- [x] Grid schema: 1×1 cells, 128×128 dev bounds
+- [x] Debug overlays (wireframes, heatmap, tools)
+- [x] Input map (`Gameplay` actions + wrapper)
+- [x] Builder prerequisites: ghost/frame/finished prefabs, data stores
+- [x] Dev scene with Grid + CameraRig + Bootstrap
+- [x] Performance baseline (300 props @ 80–90 fps)
+
+---
+
+## ⏳ Phase 1 — BuildPlacer
+- [ ] Minimal BuildPlacer script
+  - [ ] Cursor → grid cell (IsoRay + Mathx)
+  - [ ] Ghost prefab at cell center
+  - [ ] Q/E rotate (90° steps)
+  - [ ] LMB place Finished prefab
+  - [ ] RMB cancel
+- [ ] Grid occupancy updated on placement
+- [ ] EventBus fires `BuildPlaced(id, cell)`
+- [ ] Builder.md updated with Phase 1 notes
+
+---
+
+## ⏳ Phase 2 — Validators
+- [ ] Bounds check
+- [ ] Occupancy check
+- [ ] Simple resource pool validator (Wood int)
+- [ ] Ghost green/red only if valid
+- [ ] Builder.md updated with Phase 2 notes
+
+---
+
+## ⏳ Phase W1 — Procedural Terrain (Basic)
+- [ ] Seeded map generation (Plains)
+- [ ] Crash site prefab spawned near center
+- [ ] NavMesh baked
+- [ ] EventBus emits `WorldGenerated`
+- [ ] World.md updated with Phase W1 notes
+
+---
+
+## ⏳ Phase C1 — Colonist Core (Stub)
+- [ ] Colonist prefab with stats/vitals containers
+- [ ] Idle state only
+- [ ] EventBus emits `ColonistSpawned`
+- [ ] Colony.md updated with Phase C1 notes
+
+---
+
+## Future Milestones (Summary)
+- Phase 3–4: Frame/progress flow, dismantle/salvage
+- Phase S1: Resource economy MVP
+- Phase C2: Task system (stub)
+- Phase 5–7: Auto-link, blueprint mode, full resource integration
+- Phase 8–9: Multi-cell + multi-layer structures
+- Phase W2–W3: Biomes, hazards, weather, day/night
+- Phase C3–C4: Recruitment, combat stub
+- Phase 10–11: Environment effects, AI builder
+- Phase 12–14: Expanded library, narrative hooks, polish + save/load
