@@ -8,6 +8,8 @@ TagManager:
   - PW - Prop
   - PW - Building
   - Building
+  - Wall
+  - Structure
   layers:
   - Default
   - TransparentFX

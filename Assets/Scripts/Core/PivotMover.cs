@@ -32,19 +32,19 @@ namespace VerdantRemains.Core
             Vector3 forward = new Vector3(transform.forward.x, 0f, transform.forward.z).normalized;
             Vector3 right   = new Vector3(transform.right.x,   0f, transform.right.z).normalized;
 
-            if (Input.GetKey(KeyCode.W)) move += forward;
-            if (Input.GetKey(KeyCode.S)) move -= forward;
-            if (Input.GetKey(KeyCode.D)) move += right;
-            if (Input.GetKey(KeyCode.A)) move -= right;
+            if (Input.GetKey(KeyCode.W)) move += forward + right;
+            if (Input.GetKey(KeyCode.S)) move -= forward + right;
+            if (Input.GetKey(KeyCode.D)) move -= forward - right;
+            if (Input.GetKey(KeyCode.A)) move += forward - right;
 
             if (edgePan)
             {
                 var mx = (float)Input.mousePosition.x / Screen.width;
                 var my = (float)Input.mousePosition.y / Screen.height;
-                if (mx <= edgeThreshold)          move -= right;
-                else if (mx >= 1f - edgeThreshold) move += right;
-                if (my <= edgeThreshold)          move -= forward;
-                else if (my >= 1f - edgeThreshold) move += forward;
+                if (mx <= edgeThreshold)          move += forward - right;
+                else if (mx >= 1f - edgeThreshold) move -= forward - right;
+                if (my <= edgeThreshold)          move -= forward + right;
+                else if (my >= 1f - edgeThreshold) move += forward + right;
             }
 
             if (move.sqrMagnitude > 0f)

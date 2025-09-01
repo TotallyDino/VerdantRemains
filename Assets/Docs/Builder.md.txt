@@ -1,0 +1,20 @@
+# Verdant Remains — Builder System
+
+## Overview
+- Grid-based placement system.
+- Blueprint → Frame → Finished construction flow.
+- Validators: bounds, occupancy, cost.
+- Auto-linking for NESW adjacency (walls/floors).
+- Supports dismantle & salvage.
+- Fully data-driven through `BuildableDataStore` + prefabs.
+
+## Roadmap Phases
+- Phase 1–4: Minimal BuildPlacer, validators, Frame/Finished flow, dismantle.
+- Phase 5–7: Auto-linking, blueprint mode, resource integration.
+- Phase 8–9: Multi-cell & multi-layer structures.
+- Phase 10–11: Environmental effects & AI builder integration.
+- Phase 12–14: Expanded library, narrative hooks, polish & save/load.
+
+## Current Status
+- ✅ Phase 0 prerequisites: ghost materials, prefabs, buildable/resource data stores.
+- Next: Phase 1 BuildPlacer implementation.

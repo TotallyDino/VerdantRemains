@@ -1,0 +1,27 @@
+# Verdant Remains — Style & Mood Guide
+
+## Emotional Tone
+- Surreal wonder.
+- Uneasy stillness.
+- Isolation with subtle company.
+- Consequences in quiet.
+
+## Visual Style
+- Low-poly, Moebius-inspired.
+- URP toon-lit shaders with rim & hatch overlays.
+- Inverted hull outlines for clarity.
+- Muted natural tones with alien accents.
+
+## World Design
+- Suggest, don’t fully reveal.
+- Environment acts as character.
+- Long shadows, fog, atmospheric haze.
+
+## Narrative Style
+- Hybrid presentation drives story.
+- Minimal exposition.
+- Rewards curiosity & inference.
+
+## Current Status
+- Style locked; shaders partially implemented.
+- Art assets to follow later phases.
