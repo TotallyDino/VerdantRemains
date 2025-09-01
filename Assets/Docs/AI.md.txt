@@ -1,0 +1,24 @@
+# Verdant Remains — AI Systems
+
+## Builder AI
+- Colonists complete BuildTasks.
+- Haul resources to site.
+- Work until structure finishes.
+
+## Needs AI
+- Hunger, thirst, fatigue influence priorities.
+- Rest → eat → work cycles.
+
+## Combat AI
+- Simple raids with hostile entities.
+- Player can control leader.
+- Squad AI: follow, move, fight.
+
+## Technical Approach
+- Unity Behavior Designer or custom behavior trees.
+- Task system feeds into AI planner.
+- EventBus used for task assignment.
+
+## Current Status
+- Concept only; no AI tasks implemented yet.
+- Planned after Phase 3–4 Build loop is stable.

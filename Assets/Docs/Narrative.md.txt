@@ -1,0 +1,27 @@
+# Verdant Remains — Narrative System
+
+## Hybrid Presentation
+- **Show**: environment reacts (scars, smoke, props).
+- **Tell**: procedural event feed provides context.
+- Synchronization via `GameEvent` struct.
+
+## Event Feed
+- Persistent UI feed with categories (combat, social, environment).
+- Color-coded.
+- Pop-up expansion for extended lore.
+- Procedural text tokens for variety.
+
+## Anchors
+- Crew selection (pre-crash).
+- Crash site tutorial (soft onboarding).
+- First wall built.
+- First raid survived.
+
+## Tone
+- Minimal exposition.
+- Consequences shown quietly over time.
+- The world feels indifferent.
+
+## Current Status
+- Hybrid model defined.
+- Event system partially stubbed (NarrativeEvents.cs).

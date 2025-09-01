@@ -1,0 +1,28 @@
+# Verdant Remains — World & Biomes
+
+## Procedural Terrain
+- Deterministic seed-based generation.
+- MVP: 512×512 maps, Plains + Forest biomes.
+- Guaranteed crash site POI near center.
+- Secondary POIs (wrecks, groves) distributed via blue-noise sampling.
+- NavMesh baked for walkable mask.
+
+## Biomes
+- Plains: open fields, balanced resources.
+- Forest: denser vegetation, higher moisture.
+- Expansion: Glass Desert, Mire, Mountains, etc.
+
+## Hazards
+- Plains: spore veil, roaming predators.
+- Forest: echo mist, choking flora.
+- Glass Desert: lightning → slag glass, glass breath storms.
+- Mountains: frost, landslides.
+
+## Environmental Systems
+- Weather loops: rain, storms, fog, lightning.
+- Day/night cycle.
+- Environmental decay: buildables deteriorate under conditions.
+
+## Current Status
+- ✅ Procedural terrain pipeline defined.
+- ❌ Not yet integrated into Unity (Phase W1 target).

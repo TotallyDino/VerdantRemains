@@ -40,7 +40,7 @@ namespace VerdantRemains.Build
     /// Data-driven template for a placeable object.
     /// Ghost/Frame/Finished are separate prefabs to support the pipeline.
     /// </summary>
-    [CreateAssetMenu(menuName = "VerdantRemains/Buildable Template", fileName = "Buildable")]
+    [CreateAssetMenu(menuName = "VerdantRemains/Buildable DataStore", fileName = "Buildable")]
     public sealed class BuildableDataStore : ScriptableObject
     {
         [Header("Identity")]

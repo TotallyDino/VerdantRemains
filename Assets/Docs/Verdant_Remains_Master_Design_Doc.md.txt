@@ -1,0 +1,41 @@
+# Verdant Remains — Master Design Doc
+_Last updated: Phase 0 complete_
+
+---
+
+## 1. High-Level Pitch
+**Verdant Remains** is an isometric, systems-driven builder/survival game. Players harvest resources, build structures, and progress through narrative beats while managing scarcity and threats. Core loop: **Explore → Gather → Build → Upgrade → Survive**.
+
+### Design Pillars
+- **Tactile Building:** Snappy, grid-based placement with clear validation.
+- **Meaningful Scarcity:** Resources (wood, steel, food, water) gate expansion.
+- **Readable Isometric Visuals:** Ghosts, overlays, and heatmaps give feedback.
+- **Composable Systems:** Data-driven via ScriptableObjects.
+- **Hybrid Presentation:** “Show” via environment, “Tell” via event feed.
+
+---
+
+## 2. Roadmap Milestones
+- ✅ Phase 0: Foundations (grid, input, debug, perf baseline)
+- Milestone 1: Prototype (Build loop + colonist core + world seed)
+- Milestone 2: Survival Loop
+- Milestone 3: Expansion
+- Milestone 4: World Alive
+- Milestone 5: Content & Polish
+
+---
+
+## 3. Current Status
+- Phase 0 complete (all checklist items met)
+- Perf baseline validated (300 props at ~80–90 fps)
+- Supporting docs split into `Builder.md`, `World.md`, `Colony.md`, `Narrative.md`, `AI.md`, `StyleGuide.md`
+
+---
+
+## 4. References
+- See **Builder.md** for placement/building systems
+- See **World.md** for biomes, hazards, procedural terrain
+- See **Colony.md** for colonist systems & growth
+- See **Narrative.md** for hybrid presentation & event feed
+- See **AI.md** for task/combat AI
+- See **StyleGuide.md** for art + mood direction

@@ -1,0 +1,27 @@
+# Verdant Remains — Colony & Entities
+
+## Colonist Core
+- Entities with stats: Construction, Combat, Medical, Survival, Technical, Social.
+- Vitals: hunger, thirst, fatigue, HP.
+- Traits & quirks (e.g., Empath, Light Sleeper).
+- Crew selection intro: choose 3–5 survivors for landing craft.
+
+## Growth Methods
+- Survivors from wreckage.
+- Cryopods/stasis chambers.
+- Wandering humans from failed colonies.
+- Prisoners/military units.
+- Mutated/adapted humans.
+
+## Task System
+- Colonists take tasks (build, haul, repair).
+- Priority system (RimWorld-style tabs).
+- Simple queue MVP → expand later.
+
+## Combat
+- Raids: player controls leader directly.
+- Leader can command squad for tactical moves.
+
+## Current Status
+- Colony systems planned, not yet implemented.
+- Ties into Builder (Phase 3–7).
